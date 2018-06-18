@@ -1,0 +1,7 @@
+﻿$axure.loadCurrentPage(
+(function() {
+    var _ = function() { var r={},a=arguments; for(var i=0; i<a.length; i+=2) r[a[i]]=a[i+1]; return r; }
+    var _creator = function() { return _(b,c,d,e,f,g,h,g,i,[j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O],P,_(Q,R,S,T,U,V,W,_(),X,_(Y,Z,ba,bb,bc,_(bd,be,bf,bg),bh,null,bi,bb,bj,bb,bk,bl,bm,null,bn,bo,bp,bq,br,bs,bt,bo),bu,_(),bv,_(),bw,_(bx,[])),by,_(),bz,_());}; 
+var b="url",c="new_page_1.html",d="generationDate",e=new Date(1510567589683.96),f="isCanvasEnabled",g=false,h="isAdaptiveEnabled",i="variables",j="OnLoadVariable",k="operation",l="create",m="update",n="updateForced",o="submit",p="approve",q="review",r="disable",s="enable",t="flowStatus",u="toHandle",v="handling",w="handled",x="appStatus",y="toSubmit",z="typeInCode",A="refused",B="INVType",C="fee",D="incentive",E="production",F="travel",G="FPType",H="INV",I="VAT",J="showCost",K="true",L="false",M="FPAttri",N="common",O="credit",P="page",Q="packageId",R="56ff5de17e584bef8dc1b19916da1061",S="type",T="Axure:Page",U="name",V="New Page 1",W="notes",X="style",Y="baseStyle",Z="627587b6038d43cca051c114ac41ad32",ba="pageAlignment",bb="near",bc="fill",bd="fillType",be="solid",bf="color",bg=0xFFFFFFFF,bh="image",bi="imageHorizontalAlignment",bj="imageVerticalAlignment",bk="imageRepeat",bl="auto",bm="favicon",bn="sketchFactor",bo="0",bp="colorStyle",bq="appliedColor",br="fontName",bs="Applied Font",bt="borderWidth",bu="adaptiveStyles",bv="interactionMap",bw="diagram",bx="objects",by="masters",bz="objectPaths";
+return _creator();
+})());

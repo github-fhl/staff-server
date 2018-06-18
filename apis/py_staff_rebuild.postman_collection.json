@@ -1,0 +1,577 @@
+{
+	"info": {
+		"_postman_id": "447c12fb-a56f-4143-b9ba-e9fe2a39262a",
+		"name": "py_staff_rebuild",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "组织架构",
+			"description": "",
+			"item": [
+				{
+					"name": "获取领导",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}/orgNodesLeaders",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orgNodesLeaders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取组织架构",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}orgNodes",
+							"host": [
+								"{{host}}orgNodes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "节点替换",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"staffId\":\"f14acdb0-67d0-11e8-bd0d-ed3bfe90f46c\",\n\t\"nodeId\":1\n}"
+						},
+						"url": {
+							"raw": "{{host}}/orgNodes/replace",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"orgNodes",
+								"replace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "组织架构拖拽",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"previousPosition\":[10,[11]],\n\t\"targetPosition\":7,\n\t\"dropType\":0\n}"
+						},
+						"url": {
+							"raw": "{{host}}orgNodes/draft",
+							"host": [
+								"{{host}}orgNodes"
+							],
+							"path": [
+								"draft"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取可替换的员工和可被替换的节点",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}orgNodes/replace",
+							"host": [
+								"{{host}}orgNodes"
+							],
+							"path": [
+								"replace"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "fordFunction相关",
+			"description": "",
+			"item": [
+				{
+					"name": "fordFunction更名",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "test1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}v2/fordFunction/test",
+							"host": [
+								"{{host}}v2"
+							],
+							"path": [
+								"fordFunction",
+								"test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取fordFunction历史纪录",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}v2/fordFunction/Technology",
+							"host": [
+								"{{host}}v2"
+							],
+							"path": [
+								"fordFunction",
+								"Technology"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sowposition相关",
+			"description": "",
+			"item": [
+				{
+					"name": "获取当年的去重后的noteContents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}sowposition/noteContents",
+							"host": [
+								"{{host}}sowposition"
+							],
+							"path": [
+								"noteContents"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StdPos相关",
+			"description": "",
+			"item": [
+				{
+					"name": "导入StdPos",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "filePath",
+									"value": "客户测试数据-2018.xlsx",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}stdPos/import",
+							"host": [
+								"{{host}}stdPos"
+							],
+							"path": [
+								"import"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "passThrough",
+			"description": "",
+			"item": [
+				{
+					"name": "获取passThrough",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}passthrough",
+							"host": [
+								"{{host}}passthrough"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "修改passThrough",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"passThroughType\":\r\n [\r\n    {\r\n      \"name\": \"test\",\r\n      \"amount\": null,\r\n      \"children\": [\r\n        {\r\n          \"name\": \"test\",\r\n          \"amount\": null,\r\n          \"children\": null\r\n        },\r\n        {\r\n          \"name\": \"test\",\r\n          \"amount\": null,\r\n          \"children\": null\r\n        },\r\n        {\r\n          \"name\": \"test\",\r\n          \"amount\": null,\r\n          \"children\": null\r\n        }\r\n      ]\r\n    },\r\n    {\r\n      \"name\": \"test\",\r\n      \"amount\": null,\r\n      \"children\": null\r\n    },\r\n    {\r\n      \"name\": \"test\",\r\n      \"amount\": null,\r\n      \"children\": null\r\n    }\r\n  ]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{host}}passthrough",
+							"host": [
+								"{{host}}passthrough"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "编辑 sow 的 passThrough",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"otherFee\":[\n    {\n      \"name\": \"Production\",\n      \"amount\": 50000,\n      \"children\": [\n        {\n          \"name\": \"Traditional\",\n          \"amount\": 200000,\n          \"children\": null\n        },\n        {\n          \"name\": \"Digital\",\n          \"amount\": 200000,\n          \"children\": null\n        },\n        {\n          \"name\": \"CRM\",\n          \"amount\": 10000,\n          \"children\": null\n        }\n      ]\n    },\n    {\n      \"name\": \"Media\",\n      \"amount\": 20000,\n      \"children\": null\n    },\n    {\n      \"name\": \"Travel\",\n      \"amount\": 20000,\n      \"children\": null\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{host}}sowPassThroughs/1c8e8790-6ebc-11e8-9c78-eb6c00f0d483",
+							"host": [
+								"{{host}}sowPassThroughs"
+							],
+							"path": [
+								"1c8e8790-6ebc-11e8-9c78-eb6c00f0d483"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Note&PO",
+			"description": "",
+			"item": [
+				{
+					"name": "编辑 PO Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"clientPos\": [\n    {\n      \"id\": \"f61a3ef0-9b9f-11e7-bdb9-d17ced725da6\",\n      \"filePath\" : \"/uower\",\n      \n      \"production\": 30000,\n    \"passThroughFee\":{\n      \"gross\": 0,\n      \"incentive\": 0,\n      \"travel\": 20000,\n      \"media\": 10000\n       },\n      \"total\": 60000\n    },\n    {\n      \"id\": \"f61ab420-9b9f-11e7-bdb9-d17ced725da6\",\n      \"filePath\" : \"/uower/wrew\",\n      \n      \"production\": 30000,\n    \"passThroughFee\":{\n      \"gross\": 16421,\n      \"incentive\": 1107,\n      \"travel\": 0,\n      \"media\": 0\n       },\n      \"total\": 47528\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "{{host}}clientPos",
+							"host": [
+								"{{host}}clientPos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "招聘",
+			"description": "",
+			"item": [
+				{
+					"name": "onboard Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"remark\": null,\n\t\"staffInfo\": {\n\t\t\"entryDate\": \"2017-12-11\",\n\t\t\"increaseCycle\": 12,\n\t\t\"nextIncreaseMonth\": \"2017-07\",\n\t\t\"noticePeriod\": 3,\n\t\t\"contractFile\":\"测试合同\"\n\t}\n}"
+						},
+						"url": {
+							"raw": "{{host}}onboard/recruits/R201801001",
+							"host": [
+								"{{host}}onboard"
+							],
+							"path": [
+								"recruits",
+								"R201801001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "转岗",
+			"description": "",
+			"item": [
+				{
+					"name": "获取招聘单信息",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}transfers/T201806009?",
+							"host": [
+								"{{host}}transfers"
+							],
+							"path": [
+								"T201806009"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jobInfo相关",
+			"description": "",
+			"item": [
+				{
+					"name": "获取jobInfo",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "transferDate",
+									"value": "2018-06-10T16:00:00.000Z",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "contractFile",
+									"value": "测试",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}jobInfo/00908880-6d55-11e8-8727-ed3ba54773eb",
+							"host": [
+								"{{host}}jobInfo"
+							],
+							"path": [
+								"00908880-6d55-11e8-8727-ed3ba54773eb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "staff相关",
+			"description": "",
+			"item": [
+				{
+					"name": "编辑staff合同",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "staffHistory",
+									"value": "c9eaad30-6df7-11e8-97b4-697664fab8fc",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "contractFile",
+									"value": "11111",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}staffs/editContract",
+							"host": [
+								"{{host}}staffs"
+							],
+							"path": [
+								"editContract"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "freelancer相关",
+			"description": "",
+			"item": [
+				{
+					"name": "编辑freelancer合同",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "freelancerContract",
+									"value": "",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "contractFile",
+									"value": "",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}freelancers/editContract",
+							"host": [
+								"{{host}}freelancers"
+							],
+							"path": [
+								"editContract"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sow相关",
+			"description": "",
+			"item": [
+				{
+					"name": "获取sow列表",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}sows?year=2018",
+							"host": [
+								"{{host}}sows"
+							],
+							"query": [
+								{
+									"key": "year",
+									"value": "2018"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取单条sow",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{host}}sows/c6ce6eb0-6e1b-11e8-b55c-c15add626e58",
+							"host": [
+								"{{host}}sows"
+							],
+							"path": [
+								"c6ce6eb0-6e1b-11e8-b55c-c15add626e58"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

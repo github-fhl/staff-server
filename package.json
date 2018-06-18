@@ -1,0 +1,87 @@
+{
+  "name": "staff-rebuild",
+  "version": "0.0.1",
+  "description": " Staff",
+  "main": "index.js",
+  "keywords": [
+    "node.js",
+    "javascript"
+  ],
+  "scripts": {
+    "start": "node app.js NODE_ENV=dev",
+    "wf": "NODE_ENV=wf node app.js",
+    "test": "./node_modules/.bin/mocha",
+    "lint": "./node_modules/.bin/eslint --fix src/**/*.js",
+    "production": "NODE_ENV=production node app.js",
+    "precommit": "eslint src/**/*.js src/*.js app/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.loncus.com/wpp/staff-rebuild-service.git"
+  },
+  "author": "高承毅",
+  "contributors": [],
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "api-dialect": "^0.1.1",
+    "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
+    "circular-json": "^0.3.1",
+    "config": "^1.28.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
+    "double-ended-queue": "^2.1.0-0",
+    "exceljs": "^0.8.2",
+    "express": "~4.14.0",
+    "express-mysql-session": "^1.2.0",
+    "express-session": "^1.15.6",
+    "javascript-state-machine": "^3.0.1",
+    "kind-of": "^6.0.2",
+    "ldapjs": "^1.0.1",
+    "ljx-sequelize-wrapper": "^0.1.12",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.1",
+    "moment-business": "^3.0.1",
+    "morgan": "^1.7.0",
+    "multer": "^1.3.0",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.4.2",
+    "node-schedule": "^1.2.5",
+    "number-precision": "^1.2.0",
+    "object-assign": "^4.1.1",
+    "parameter": "^2.2.3",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "rbac": "^4.0.2",
+    "readable-stream": "^2.3.2",
+    "redis": "^2.8.0",
+    "sequelize": "3.30.4",
+    "sequelize-redis-cache": "^2.0.1",
+    "socket.io": "^2.1.1",
+    "uuid": "^3.1.0",
+    "web-error": "^4.0.1",
+    "winston": "^2.4.0",
+    "winston-daily-rotate-file": "^1.7.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "debug": "^2.6.9",
+    "eslint": "^4.10.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.3",
+    "mocha": "^3.5.3",
+    "randomstring": "^1.1.5",
+    "should": "^11.2.1"
+  },
+  "lint-staged": {
+    "**/*.js": "lint-staged:js"
+  }
+}

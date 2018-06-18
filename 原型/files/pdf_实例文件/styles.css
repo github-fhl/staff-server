@@ -1,0 +1,44 @@
+﻿body {
+  margin:0px;
+  background-image:none;
+  position:static;
+  left:auto;
+  width:681px;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
+}
+#base {
+  position:absolute;
+  z-index:0;
+}
+#u18929_div {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:681px;
+  height:847px;
+  background:inherit;
+  background-color:rgba(242, 242, 242, 1);
+  border:none;
+  border-radius:0px;
+  -moz-box-shadow:none;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+  font-size:28px;
+}
+#u18929 {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:681px;
+  height:847px;
+  font-size:28px;
+}
+#u18930 {
+  position:absolute;
+  left:2px;
+  top:404px;
+  width:677px;
+  word-wrap:break-word;
+}
